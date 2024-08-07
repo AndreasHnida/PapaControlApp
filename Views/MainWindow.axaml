@@ -1,0 +1,77 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:PapaControlApp.ViewModels"
+        xmlns:dialogs="using:AvaloniaDialogs.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="PapaControlApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="PapaControlApp">
+
+  <Design.DataContext>
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+  <dialogs:ReactiveDialogHost CloseOnClickAway="True">
+    <Grid RowDefinitions="Auto, *, Auto">
+      <!-- Title Bar -->
+      <StackPanel Grid.Row="0" Orientation="Vertical">
+        <Grid Background="White" Height="40" ColumnDefinitions="Auto, Auto, *, Auto, Auto">
+          <Rectangle Grid.Column="0" Fill="White" Width="40"></Rectangle>
+          <Rectangle Grid.Column="1" Fill="White" Width="40"></Rectangle>
+          <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label HorizontalAlignment="Center"  FontWeight="Black">PAPA CONTROL</Label>
+            <Label HorizontalAlignment="Center" FontWeight="Light">Digital Parenting with a Breeze</Label>
+          </StackPanel>
+          <Rectangle Grid.Column="3" Fill="White" Width="40"></Rectangle>
+          <Rectangle Grid.Column="4" Fill="White" Width="40"></Rectangle>
+        </Grid>
+      </StackPanel>
+      <!-- Content -->
+      <Grid Grid.Row="1" ColumnDefinitions="2*, *">
+        <Grid Grid.Column="0" Margin="30 30">
+          <Image MaxWidth="600" Source="/Assets/cap.png"/>
+        </Grid>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="15 5">
+          <StackPanel Orientation="Horizontal" Height="40">
+            <TextBlock Text="Usage" FontWeight="Bold" Margin="0 8"/>
+            <TextBlock Margin="10 8" Text="{Binding ElapsedTime}"/>
+            <TextBlock Text="Remaining" FontWeight="Bold" Margin="0 8"/>
+            <TextBlock Margin="10 8" Text="{Binding RemainingTime}"/>
+          </StackPanel>
+          <TextBlock Text="When" FontSize="16" Margin="0 8"/>
+          <TextBox Margin="0 5" Watermark="From 9am to 9pm" IsEnabled="{Binding IsInputEnabled}" />
+          <TextBlock Text="How Long" FontSize="16" Margin="0 8"/>
+          <TextBox Margin="0 5" Watermark="1h" Text="{Binding AllowedTime, Mode=TwoWay}" IsEnabled="{Binding IsInputEnabled}"/>
+          <Button Content="{Binding ToggleButtonText}" Click="ToggleInput" Margin="0 10"/>
+        </StackPanel>
+      </Grid>
+      <!-- Footer -->
+      <StackPanel Grid.Row="2">
+        <Grid Height="10">
+          <Rectangle Fill="#4185D2"></Rectangle>
+        </Grid>
+      </StackPanel>
+      <dialogs:Snackbar Name="Snackbar"/>
+
+      <!-- Sliding PIN Panel -->
+      <Grid Name="PinEntryPanel" Grid.RowSpan="3" Width="250" HorizontalAlignment="Left" Margin="-250,0,0,0">
+        <Grid.Styles>
+          <Style Selector="Grid#PinEntryPanel">
+            <Setter Property="Transitions">
+              <Transitions>
+                <ThicknessTransition Property="Margin" Duration="0:0:0.3"/>
+              </Transitions>
+            </Setter>
+          </Style>
+        </Grid.Styles>
+        <StackPanel Background="White" Width="250" Opacity="0.8">
+          <TextBlock Text="Enter PIN" Margin="10"/>
+          <TextBox Name="PinTextBox" PasswordChar="*" Margin="10"/>
+          <Button Content="Submit" Click="SubmitPin" Margin="10"/>
+        </StackPanel>
+      </Grid>
+    </Grid>
+  </dialogs:ReactiveDialogHost>
+</Window>

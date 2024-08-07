@@ -1,0 +1,119 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|f:\\_cloud\\03 kundendaten\\00 ah\\_code\\c#\\papacontrolapp\\views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|solutionrelative:views\\mainwindow.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|f:\\_cloud\\03 kundendaten\\00 ah\\_code\\c#\\papacontrolapp\\viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|solutionrelative:viewmodels\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|f:\\_cloud\\03 kundendaten\\00 ah\\_code\\c#\\papacontrolapp\\views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|solutionrelative:views\\mainwindow.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|f:\\_cloud\\03 kundendaten\\00 ah\\_code\\c#\\papacontrolapp\\app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}",
+      "RelativeMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|solutionrelative:app.axaml||{6D5344A2-2FCD-49DE-A09D-6A14FD1B1224}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|f:\\_cloud\\03 kundendaten\\00 ah\\_code\\c#\\papacontrolapp\\app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|solutionrelative:app.axaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|f:\\_cloud\\03 kundendaten\\00 ah\\_code\\c#\\papacontrolapp\\papacontrolapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E8D089E5-EBE2-4A5E-A5D2-D434B07A4FD9}|PapaControlApp.csproj|solutionrelative:papacontrolapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\MainWindowViewModel.cs",
+              "ToolTip": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\ViewModels\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModels\\MainWindowViewModel.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAwwFIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-31T08:56:44.35Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.axaml",
+              "DocumentMoniker": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\Views\\MainWindow.axaml",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml",
+              "ToolTip": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\Views\\MainWindow.axaml",
+              "RelativeToolTip": "Views\\MainWindow.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-29T11:14:39.822Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.axaml.cs",
+              "DocumentMoniker": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\Views\\MainWindow.axaml.cs",
+              "RelativeDocumentMoniker": "Views\\MainWindow.axaml.cs",
+              "ToolTip": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\Views\\MainWindow.axaml.cs",
+              "RelativeToolTip": "Views\\MainWindow.axaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAIwDkAAABwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-30T08:21:44.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.axaml",
+              "DocumentMoniker": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\App.axaml",
+              "RelativeDocumentMoniker": "App.axaml",
+              "ToolTip": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\App.axaml",
+              "RelativeToolTip": "App.axaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-07-29T11:18:00.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.axaml.cs",
+              "DocumentMoniker": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\App.axaml.cs",
+              "RelativeDocumentMoniker": "App.axaml.cs",
+              "ToolTip": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\App.axaml.cs",
+              "RelativeToolTip": "App.axaml.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwC0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-29T11:39:29.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PapaControlApp.csproj",
+              "DocumentMoniker": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj",
+              "RelativeDocumentMoniker": "PapaControlApp.csproj",
+              "ToolTip": "F:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj",
+              "RelativeToolTip": "PapaControlApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-30T08:46:23.795Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

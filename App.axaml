@@ -1,0 +1,39 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:dialogHostAvalonia="using:DialogHostAvalonia"
+             x:Class="PapaControlApp.App"
+             xmlns:local="using:PapaControlApp"
+             RequestedThemeVariant="Default">
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
+  <Application.Styles>
+    <FluentTheme />
+    <dialogHostAvalonia:DialogHostStyles/>
+  </Application.Styles>
+  <TrayIcon.Icons>
+    <TrayIcons>
+      <TrayIcon Icon="/Assets/baseball-hat.ico"
+               Clicked="TrayIcon_Clicked" >
+        <TrayIcon.Menu>
+          <NativeMenu>
+            <NativeMenuItem Header="Settings">
+              <NativeMenu>
+                <NativeMenuItem Header="Option1"></NativeMenuItem>
+                <NativeMenuItem Header="Option2"></NativeMenuItem>
+                <NativeMenuItemSeparator Header="-" />
+                <NativeMenuItem Header="Option3"></NativeMenuItem>
+                <NativeMenuItem Click="Quit_Clicked" Header="Quit"> </NativeMenuItem>
+              </NativeMenu>
+            </NativeMenuItem>
+          </NativeMenu>
+        </TrayIcon.Menu>
+      </TrayIcon>
+    </TrayIcons>
+  </TrayIcon.Icons>
+    <Application.DataTemplates>
+        <local:ViewLocator/>
+    </Application.DataTemplates>
+  
+
+</Application>
