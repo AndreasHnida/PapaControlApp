@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lGHagrFHB9byhZ+54C7q5AdU2/iYMt02yy5kEBtQWF6Mgyn4Py/q6eNKISJEI395nXTPz1lBVFx8rOkIr+XE3Q==",
+  "dgSpecHash": "YEcZDtabudBFi1rK1eXVSZ9q0XZXByetRzgRsm68io6R3eC6eD5sP6OcU7h+11BYSqPsAhxPsQAR87KN/UWiHg==",
   "success": true,
-  "projectFilePath": "T:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj",
+  "projectFilePath": "C:\\Users\\User\\_code\\C#\\PapaControlApp\\PapaControlApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\avalonia\\11.1.0\\avalonia.11.1.0.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.22045.20230930\\avalonia.angle.windows.natives.2.1.22045.20230930.nupkg.sha512",

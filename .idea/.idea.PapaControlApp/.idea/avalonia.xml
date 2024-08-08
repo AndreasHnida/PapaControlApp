@@ -4,6 +4,7 @@
     <option name="projectPerEditor">
       <map>
         <entry key="App.axaml" value="PapaControlApp.csproj" />
+        <entry key="Views/MainWindow.axaml" value="PapaControlApp.csproj" />
       </map>
     </option>
   </component>

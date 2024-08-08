@@ -15,12 +15,12 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PapaControlApp
-build_property.ProjectDir = T:\_Cloud\03 Kundendaten\00 ah\_Code\C#\PapaControlApp\
+build_property.ProjectDir = C:\Users\User\_code\C#\PapaControlApp\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
-[T:/_Cloud/03 Kundendaten/00 ah/_Code/C\#/PapaControlApp/App.axaml]
+[C:/Users/User/_code/C\#/PapaControlApp/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[T:/_Cloud/03 Kundendaten/00 ah/_Code/C\#/PapaControlApp/Views/MainWindow.axaml]
+[C:/Users/User/_code/C\#/PapaControlApp/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

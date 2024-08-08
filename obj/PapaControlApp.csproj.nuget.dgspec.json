@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "T:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj": {}
+    "C:\\Users\\User\\_code\\C#\\PapaControlApp\\PapaControlApp.csproj": {}
   },
   "projects": {
-    "T:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj": {
+    "C:\\Users\\User\\_code\\C#\\PapaControlApp\\PapaControlApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "T:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj",
+        "projectUniqueName": "C:\\Users\\User\\_code\\C#\\PapaControlApp\\PapaControlApp.csproj",
         "projectName": "PapaControlApp",
-        "projectPath": "T:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\PapaControlApp.csproj",
+        "projectPath": "C:\\Users\\User\\_code\\C#\\PapaControlApp\\PapaControlApp.csproj",
         "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-        "outputPath": "T:\\_Cloud\\03 Kundendaten\\00 ah\\_Code\\C#\\PapaControlApp\\obj\\",
+        "outputPath": "C:\\Users\\User\\_code\\C#\\PapaControlApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
