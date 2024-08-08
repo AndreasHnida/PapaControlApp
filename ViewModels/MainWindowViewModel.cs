@@ -10,6 +10,7 @@ using Avalonia.Threading;
 using ReactiveUI;
 using System.Text;
 using System.Reactive;
+using Avalonia;
 using PapaControlApp.Helpers;
 
 namespace PapaControlApp.ViewModels
@@ -130,6 +131,15 @@ namespace PapaControlApp.ViewModels
             return true;
         }
 
+        public void ResetTimerCommand()
+        {
+            _totalElapsedSeconds = 0;
+        }
+
+        public void QuitCommand()
+        {
+            
+        }
         private void SaveSettings()
         {
             try
