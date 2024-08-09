@@ -45,8 +45,8 @@
           <TextBlock Text="How Long" FontSize="16" Margin="0 8"/>
           <TextBox Margin="0 5" Watermark="1h" Text="{Binding AllowedTime, Mode=TwoWay}" IsEnabled="{Binding IsInputEnabled}"/>
           <Button Content="{Binding ToggleButtonText}" Click="ToggleInput" Margin="0 10"/>
-          <Button Content="Reset Timer" Click="{Binding ResetTimerCommand}" Margin="0 10"/>
-          <Button Content="Quit" Click="{Binding QuitCommand}" Margin="0 10"/>
+          <Button Content="Reset Timer" Command="{Binding ResetTimerCommand}" Margin="0 10"/>
+          <Button Content="Quit" Command="{Binding QuitCommand}" Margin="0 10"/>
         </StackPanel>
       </Grid>
       <!-- Footer -->

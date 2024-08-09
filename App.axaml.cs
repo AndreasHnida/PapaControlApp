@@ -1,14 +1,14 @@
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.ApplicationLifetimes;
-using AvaloniaDialogs.Views;
-using Avalonia.Controls.Notifications;
-using Avalonia.Data.Core;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using PapaControlApp.ViewModels;
 using PapaControlApp.Views;
 using System;
+using Avalonia.Threading;
+using PapaControlApp.Helpers;
+
 
 namespace PapaControlApp
 {
@@ -17,8 +17,9 @@ namespace PapaControlApp
 
 
         private Window _mainWindow;
-        private TrayIcon trayIcon;
-
+        private TrayIcon _trayIcon;
+        private DispatcherTimer _autosaveTimer;
+        private MainWindowViewModel _mainWindowViewModel;
         public override void Initialize()
         {
             AvaloniaXamlLoader.Load(this);
@@ -37,16 +38,32 @@ namespace PapaControlApp
                 {
                     DataContext = new MainWindowViewModel()
                 };
-                trayIcon = new TrayIcon();
-                trayIcon.Clicked += TrayIcon_Clicked;
+                _trayIcon = new TrayIcon();
+                _trayIcon.Clicked += TrayIcon_Clicked;
                 desktop.ShutdownMode = ShutdownMode.OnExplicitShutdown;
                 desktop.MainWindow = _mainWindow;
+                _mainWindowViewModel = (MainWindowViewModel)_mainWindow.DataContext;
                 //desktop.MainWindow = _mainWindow;
-                desktop.Exit += (sender, e) => trayIcon.Dispose();
+                desktop.Exit += (sender, e) => _trayIcon.Dispose();
+                InitAutosave();
             }
 
             base.OnFrameworkInitializationCompleted();
 
+        }
+
+        private void InitAutosave()
+        {
+           _autosaveTimer = new DispatcherTimer();
+           _autosaveTimer.Interval = TimeSpan.FromSeconds(60);
+           _autosaveTimer.Tick += (sender, e) => AutosaveTimer_Tick (sender, e);
+           _autosaveTimer.Start();
+        }
+
+        private void AutosaveTimer_Tick(object? sender, System.EventArgs e)
+        {
+            Dlog.Log("AutosaveTimer_Tick");
+            _mainWindowViewModel.SaveSettings();
         }
         private void Quit_Clicked(object? sender, System.EventArgs e)
         {

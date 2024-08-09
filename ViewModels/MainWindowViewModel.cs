@@ -7,19 +7,18 @@ using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Timers;
 using Avalonia.Threading;
+using Avalonia.Interactivity;
 using ReactiveUI;
 using System.Text;
 using System.Reactive;
 using Avalonia;
 using PapaControlApp.Helpers;
+using Microsoft.Win32;
 
 namespace PapaControlApp.ViewModels
 {
-
     public partial class MainWindowViewModel : ReactiveObject
     {
-
-
         private const string SettingsFilePath = "settings.dat";
         private readonly byte[] _encryptionKey = Encoding.UTF8.GetBytes("qwertzuiopasdfgh");
         private long _lastTickCount;
@@ -32,20 +31,18 @@ namespace PapaControlApp.ViewModels
         private bool _isInputEnabled = false;
         private string _toggleButtonText = "Unlock Input";
         
-        public void ToggleInput()
-        {
-            IsInputEnabled = !IsInputEnabled;
-        }
         public string ElapsedTime
         {
             get => _elapsedTime;
             set => this.RaiseAndSetIfChanged(ref _elapsedTime, value);
         }
+
         public string RemainingTime
         {
             get => _remainingTime;
             set => this.RaiseAndSetIfChanged(ref _remainingTime, value);
         }
+
         public string AllowedTime
         {
             get => _allowedTime;
@@ -55,11 +52,13 @@ namespace PapaControlApp.ViewModels
                 SaveSettings();
             }
         }
+
         public string ToggleButtonText
         {
             get => _toggleButtonText;
             set => this.RaiseAndSetIfChanged(ref _toggleButtonText, value);
         }
+
         public bool IsInputEnabled
         {
             get => _isInputEnabled;
@@ -69,24 +68,57 @@ namespace PapaControlApp.ViewModels
                 ToggleButtonText = value ? "Lock Input" : "Unlock Input";
             }
         }
+
         public MainWindowViewModel()
         {
+            
+            SystemEvents.PowerModeChanged += SystemEvents_PowerModeChanged;
             LoadSettings();
             _stopwatch = new Stopwatch();
-            _stopwatch.Start();
-            
+
             _lastTickCount = Environment.TickCount64;
 
             _timer = new Timer(1000);
             _timer.Elapsed += OnTimerElapsed;
-            _timer.Start();
+            StartUsageTimeRecording();
         }
 
+        public void StartUsageTimeRecording()
+        {
+            _timer.Start();
+            _stopwatch.Start();
+        }
+
+        public void StopUsageTimeRecording()
+        {   
+            SaveSettings();
+            _timer.Stop();
+            _stopwatch.Stop();
+        }
+
+        private void SystemEvents_PowerModeChanged(object sender, PowerModeChangedEventArgs e)
+        {
+            switch (e.Mode)
+            {
+                case PowerModes.Resume:
+                    Dlog.Log("System resumed from sleep/hibernation.");
+                    // Handle system resume (e.g., restart timer, refresh data)
+                    StartUsageTimeRecording();
+                    break;
+                case PowerModes.Suspend:
+                    Dlog.Log("System entering sleep/hibernation.");
+                    // Handle system suspend (e.g., pause timer, save state)
+                    StopUsageTimeRecording();
+                    break;
+                // Add cases for other PowerModes as needed
+            }
+        }
+        
         private void OnTimerElapsed(object sender, ElapsedEventArgs e)
         {
             _totalElapsedSeconds += (long)_stopwatch.Elapsed.TotalSeconds;
             _stopwatch.Restart();
-            Dlog.Log("LastTickCount: " + _lastTickCount); 
+            // Dlog.Log("LastTickCount: " + _lastTickCount);
             if (TryParseHumanReadableTime(_allowedTime, out TimeSpan allowedTimeSpan))
             {
                 TimeSpan elapsedTimeSpan = TimeSpan.FromSeconds(_totalElapsedSeconds);
@@ -96,7 +128,6 @@ namespace PapaControlApp.ViewModels
                 {
                     ElapsedTime = FormatTimeSpan(elapsedTimeSpan);
                     RemainingTime = FormatTimeSpan(remainingTimeSpan);
-                    SaveSettings();
                 });
 
                 if (remainingTimeSpan <= TimeSpan.Zero)
@@ -138,14 +169,16 @@ namespace PapaControlApp.ViewModels
 
         public void QuitCommand()
         {
-            
+            Dlog.Log("Quitting...");
         }
-        private void SaveSettings()
+
+        public void SaveSettings()
         {
             try
             {
                 var data = $"{_allowedTime}|{_totalElapsedSeconds}";
                 var encryptedData = EncryptString(data, _encryptionKey);
+                Dlog.Log("Saving settings...");
                 File.WriteAllBytes(SettingsFilePath, encryptedData);
             }
             catch (Exception ex)
@@ -175,6 +208,7 @@ namespace PapaControlApp.ViewModels
                 Debug.WriteLine($"Failed to load settings: {ex.Message}");
             }
         }
+
         private byte[] EncryptString(string plainText, byte[] key)
         {
             using (var aes = Aes.Create())
@@ -192,6 +226,7 @@ namespace PapaControlApp.ViewModels
                     {
                         sw.Write(plainText);
                     }
+
                     return ms.ToArray();
                 }
             }

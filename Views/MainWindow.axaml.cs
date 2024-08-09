@@ -29,19 +29,6 @@ public partial class MainWindow : Window
         this.Hide();
     }
 
-    private async void DialogButton_Click(object? sender, RoutedEventArgs args)
-    {
-        SingleActionDialog dialog = new()
-        {
-            Message = "Hello from C# code! Do you want to see a snackbar?",
-            ButtonText = "Click me!"
-        };
-        if ((await dialog.ShowAsync()).HasValue)
-        {
-            Snackbar.Show("I'm a snackbar!", TimeSpan.FromSeconds(2), "I Know");
-        }
-    }
-
     private void ToggleInput(object? sender, RoutedEventArgs args)
     {
         var pinPanel = this.FindControl<Grid>("PinEntryPanel");
